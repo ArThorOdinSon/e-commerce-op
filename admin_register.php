@@ -157,13 +157,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <a href="index.php" class="d-inline-block mb-3">
                         <h1 class="text-primary">TimeZenith</h1>
                     </a>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus.</p>
+                    <p class="mb-0">Discover the benefits our satisfied customers rave about and join the journey towards a healthier, more connected life with TimeZenith.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Philippines</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+63 932 869 7579</p>
+                    <p><i class="fa fa-envelope me-3"></i>timezenith@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -171,14 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="mb-4">Our Products</h5>
-                    <a class="btn btn-link" href="">Hair Shining Shampoo</a>
-                    <a class="btn btn-link" href="">Anti-dandruff Shampoo</a>
-                    <a class="btn btn-link" href="">Anti Hair Fall Shampoo</a>
-                    <a class="btn btn-link" href="">Hair Growing Shampoo</a>
-                    <a class="btn btn-link" href="">Anti smell Shampoo</a>
-                </div>
+                   
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="mb-4">Popular Link</h5>
                     <a class="btn btn-link" href="">About Us</a>

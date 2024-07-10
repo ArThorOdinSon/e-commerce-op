@@ -1,9 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Hairnic - Single Product Website Template</title>
+    <title>TimeZenith - Single Product Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -14,9 +17,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -32,47 +33,43 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a href="index.html" class="navbar-brand">
-                    <h2 class="text-white">Hairnic</h2>
+                <a href="index.php" class="navbar-brand">
+                    <h2 class="text-white">TimeZenith</h2>
                 </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
+</button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link">Products</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="how-to-use.html" class="dropdown-item">How To Use</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="blog.html" class="dropdown-item">Blog Articles</a>
-                                <a href="404.html" class="dropdown-item active">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn btn-dark py-2 px-4 d-none d-lg-inline-block">Shop Now</a>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.php" class="nav-link active">About</a></li>
+                        <li class="nav-item"><a href="product.php" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+                        <?php if (isset($_SESSION['username'])): ?>
+                            <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+                            <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
+                                <li class="nav-item"><a href="admin_dashboard.php" class="nav-link">Admin Dashboard</a></li>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <li class="nav-item"><a href="customer_login.php" class="nav-link">Login</a></li>
+                        <?php endif; ?>
+                    </ul>
+                    <?php if (!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] != 'admin')): ?>
+                        <a href="#" class="btn btn-custom py-2 px-4 d-none d-lg-inline-block">Shop Now</a>
+                    <?php endif; ?>
                 </div>
             </nav>
         </div>
@@ -148,9 +145,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Philippines</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+63 932 869 7579</p>
+                    <p><i class="fa fa-envelope me-3"></i>timezenith@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -159,14 +156,7 @@
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="mb-4">Our Products</h5>
-                    <a class="btn btn-link" href="">Hair Shining Shampoo</a>
-                    <a class="btn btn-link" href="">Anti-dandruff Shampoo</a>
-                    <a class="btn btn-link" href="">Anti Hair Fall Shampoo</a>
-                    <a class="btn btn-link" href="">Hair Growing Shampoo</a>
-                    <a class="btn btn-link" href="">Anti smell Shampoo</a>
-                </div>
+                   
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="mb-4">Popular Link</h5>
                     <a class="btn btn-link" href="">About Us</a>

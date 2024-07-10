@@ -120,7 +120,7 @@ session_start();
                         <div class="border py-5 px-3">
                             <i class="fa fa-envelope fa-3x text-dark mb-4"></i>
                             <h5 class="text-white">Mail Us</h5>
-                            <h5 class="fw-light text-white">agthreadsofficial@gmail.com</h5>
+                            <h5 class="fw-light text-white">timezenith@gmail.com</h5>
                         </div>
                     </div>
                 </div>
@@ -131,14 +131,21 @@ session_start();
 
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="text-primary mb-3" style="color: black;"><span class="fw-light" style="color: black;">If You Have Any Query,</span> Please Contact Us</h1></div>
-            <div class="row g-5">
-                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <div class="wow fadeIn" data-wow-delay="0.3s">
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="text-primary mb-3" style="color: black;">
+                <span class="fw-light" style="color: black;">If You Have Any Query,</span> Please Contact Us
+            </h1>
+        </div>
+        <div class="row g-5 justify-content-center">
+            <div class="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
+                <p class="mb-4">
+                    The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.
+                    <a href="https://htmlcodex.com/contact-form">Download Now</a>.
+                </p>
+                <div class="wow fadeIn" data-wow-delay="0.3s">
+                    <div class="contact-form-container">
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -172,16 +179,12 @@ session_start();
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.5s">
-                    <iframe class="w-100 h-100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                    frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-                </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Contact End -->
+
         
 
     <!-- Newsletter Start -->
@@ -214,13 +217,13 @@ session_start();
                     <a href="index.php" class="d-inline-block mb-3">
                         <h1 class="text-primary">TimeZenith</h1>
                     </a>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus.</p>
+                    <p class="mb-0">Discover the benefits our satisfied customers rave about and join the journey towards a healthier, more connected life with TimeZenith.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Philippines</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+63 932 869 7579</p>
+                    <p><i class="fa fa-envelope me-3"></i>timezenith@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -229,14 +232,7 @@ session_start();
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="mb-4">Our Products</h5>
-                    <a class="btn btn-link" href="">Hair Shining Shampoo</a>
-                    <a class="btn btn-link" href="">Anti-dandruff Shampoo</a>
-                    <a class="btn btn-link" href="">Anti Hair Fall Shampoo</a>
-                    <a class="btn btn-link" href="">Hair Growing Shampoo</a>
-                    <a class="btn btn-link" href="">Anti smell Shampoo</a>
-                </div>
+                   
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="mb-4">Popular Link</h5>
                     <a class="btn btn-link" href="">About Us</a>
