@@ -1,12 +1,9 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>TimeZenith - Single Product Website Template</title>
+    <title>Silverback Electrical Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,30 +43,16 @@ session_start();
     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a href="index.php" class="navbar-brand">
-                    <h2 class="text-white">TimeZenith</h2>
+                <a href="services.html" class="navbar-brand">
+                    <h2 class="text-white">Silverback</h2>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="product.php" class="nav-link">Products</a></li>
-                        <li class="nav-item"><a href="contact.php" class="nav-link active">Contact</a></li>
-                        <?php if (isset($_SESSION['username'])): ?>
-                            <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
-                            <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
-                                <li class="nav-item"><a href="admin_dashboard.php" class="nav-link">Admin Dashboard</a></li>
-                            <?php endif; ?>
-                        <?php else: ?>
-                            <li class="nav-item"><a href="customer_login.php" class="nav-link">Login</a></li>
-                        <?php endif; ?>
-                    </ul>
-                    <?php if (!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] != 'admin')): ?>
-                        <a href="#" class="btn btn-custom py-2 px-4 d-none d-lg-inline-block">Shop Now</a>
-                    <?php endif; ?>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
                 </div>
             </nav>
         </div>
@@ -83,8 +66,7 @@ session_start();
             <h1 class="display-4 text-white mb-3 animated slideInDown">Contact</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="services.html">Our Services</a></li>
                     <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
                 </ol>
             </nav>
@@ -140,10 +122,6 @@ session_start();
         </div>
         <div class="row g-5 justify-content-center">
             <div class="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
-                <p class="mb-4">
-                    The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.
-                    <a href="https://htmlcodex.com/contact-form">Download Now</a>.
-                </p>
                 <div class="wow fadeIn" data-wow-delay="0.3s">
                     <div class="contact-form-container">
                         <form>
@@ -192,7 +170,7 @@ session_start();
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h1 class="text-white mb-3"><span class="fw-light text-dark">Let's Subscribe</span> The Newsletter</h1>
-                <p class="text-white mb-4">Subscribe now to get 30% discount on any of our products</p>
+                <p class="text-white mb-4">Subscribe now to receive updates and exclusive offers!s</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-7 wow fadeIn" data-wow-delay="0.5s">
@@ -215,15 +193,15 @@ session_start();
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <a href="index.php" class="d-inline-block mb-3">
-                        <h1 class="text-primary">TimeZenith</h1>
+                        <h1 class="text-primary">Silverback Electrical Services</h1>
                     </a>
-                    <p class="mb-0">Discover the benefits our satisfied customers rave about and join the journey towards a healthier, more connected life with TimeZenith.</p>
+                    <p class="mb-0">Explore the benefits our satisfied customers rave about and join the journey towards a safer, more efficient home with Silverback Electrical Services.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="mb-4">Get In Touch</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>Philippines</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+63 932 869 7579</p>
-                    <p><i class="fa fa-envelope me-3"></i>timezenith@gmail.com</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+63 932 888 7777</p>
+                    <p><i class="fa fa-envelope me-3"></i>silverback@sample.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -247,7 +225,7 @@ session_start();
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">TimeZenith</a>
+                        &copy; <a class="border-bottom" href="#">Silverback Electrical Services</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
