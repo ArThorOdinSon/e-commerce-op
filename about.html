@@ -1,44 +1,6 @@
 <?php
 session_start();
-
-// Database connection settings
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "singleproduct";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch products from database
-$sql = "SELECT name, price, image FROM products";
-$result = $conn->query($sql);
-
-$products = array();
-if ($result) {
-    // If results are found, fetch data into an array
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $products[] = $row;
-        }
-    } else {
-        echo "No products found";
-    }
-} else {
-    // If query fails, handle the error
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-// Close MySQL connection
-$conn->close();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,8 +55,8 @@ $conn->close();
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="product.php" class="nav-link active">Products</a></li>
+                        <li class="nav-item"><a href="about.php" class="nav-link active">About</a></li>
+                        <li class="nav-item"><a href="product.php" class="nav-link">Products</a></li>
                         <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
                         <?php if (isset($_SESSION['username'])): ?>
                             <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
@@ -118,12 +80,12 @@ $conn->close();
     <!-- Hero Start -->
     <div class="container-fluid bg-primary hero-header mb-5">
         <div class="container text-center">
-            <h1 class="display-4 text-white mb-3 animated slideInDown">Products</h1>
+            <h1 class="display-4 text-white mb-3 animated slideInDown">About Us</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Products</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">About</li>
                 </ol>
             </nav>
         </div>
@@ -131,38 +93,64 @@ $conn->close();
     <!-- Hero End -->
 
 
-    <!-- Product Start -->
+    <!-- Feature Start -->
 <div class="container-fluid py-5">
     <div class="container">
-        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
-        <h1 class="text-primary mb-3" style="color: black;">
+    <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+    <h1 class="text-primary mb-3" style="color: black;">
         <span class="fw-light" style="color: black;">Discover the Health Benefits of Our</span> TimeZenith Smartwatch
-        </h1>
-        <p class="mb-5">Embrace a healthier lifestyle with TimeZenith Smartwatch. This premium device is equipped with advanced features to monitor your heart rate, track sleep patterns, measure blood pressure, and detect blood oxygen levels. Perfect for those who seek to maintain an active and healthy lifestyle.</p>
-        </div>
+    </h1>
+    <p class="mb-5" style="color: black;">Embrace a healthier lifestyle with features designed to monitor and enhance your well-being.</p>
+</div>
         <div class="row g-4">
-            <?php foreach ($products as $product) : ?>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="product-item text-center border h-100 p-4">
-                        <img class="img-fluid mb-4" src="<?php echo $product['image']; ?>" alt="">
-                        <div class="mb-2">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(99)</small>
-                        </div>
-                        <a href="#" class="h6 d-inline-block mb-2"><?php echo $product['name']; ?></a>
-                        <h5 class="text-primary mb-3">$<?php echo $product['price']; ?></h5>
-                        <a href="#" class="btn btn-outline-primary px-3">Add To Cart</a>
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="feature position-relative bg-primary text-center p-3">
+                    <div class="border py-5 px-3">
+                        <i class="fa fa-heartbeat fa-3x text-dark mb-4"></i>
+                        <h5 class="text-white mb-0">Heart Rate Monitoring</h5>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            </div>
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                <div class="feature position-relative bg-primary text-center p-3">
+                    <div class="border py-5 px-3">
+                        <i class="fa fa-tint fa-3x text-dark mb-4"></i>
+                        <h5 class="text-white mb-0">Blood Oxygen Detection</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                <div class="feature position-relative bg-primary text-center p-3">
+                    <div class="border py-5 px-3">
+                        <i class="fa fa-bed fa-3x text-dark mb-4"></i>
+                        <h5 class="text-white mb-0">Sleep Monitoring</h5>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- Product End -->
+<!-- Feature End -->
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/watch7-removebg.png">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="text-primary mb-4">Embrace a Healthy Lifestyle <span class="fw-light text-dark">with TimeZenith Smartwatch</span></h1>
+                    <p class="mb-4">Elevate your health with advanced features like heart rate monitoring, blood pressure measurement, sleep tracking, and blood oxygen detection.</p>
+                    <p class="mb-4">Crafted from premium materials, this smartwatch is your perfect partner for a healthy lifestyle.</p>
+                    <a class="btn btn-custom py-2 px-4" href="">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 
 
     <!-- Newsletter Start -->
@@ -243,7 +231,7 @@ $conn->close();
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-custom btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
